@@ -1,6 +1,8 @@
-x, y, z, t = map(int, input().split())
+from math import *
+# x1, y1, x2, y2 = map(int, input().split())
+n = int(input())
 
-print(x, y, z, t, sep='  ', end="\n\n")
-print(y, z, x, t, sep='--', end="\n\n")
-print(2 * x, 3 * y, 4 * z, 5 * t, sep=',', end="\n\n")
-print("KET THUC !!")
+if(n % 2 == 0):
+    print("YES")
+else:
+    print("NO")
