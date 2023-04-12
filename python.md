@@ -167,3 +167,7 @@ gcd(a, b)
 comb(n, k) tổ hợp k chập n
 round(): tròn (5)
 fabs(): giá trị tuyệt đối
+
+# Shorthand if, toán tử ba ngôi
+
+<biến> = <câulệnh đúng> if <điều kiện> else <câulệnh sai>

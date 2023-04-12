@@ -1,8 +1,6 @@
 from math import *
-# x1, y1, x2, y2 = map(int, input().split())
-n = int(input())
+n, m, a = map(int, input().split())
+# n = input()
 
-if(n % 2 == 0):
-    print("YES")
-else:
-    print("NO")
+size = ceil(n / a) * ceil(m / a)
+print(size)
