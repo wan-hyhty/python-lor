@@ -1,22 +1,24 @@
 from math import *
-a, b, c = map(int, input().split())
-# n = int(input())
+# a, b, c = map(int, input().split())
+n = int(input())
 
-delta = b**2 - 4*a*c
-if (a != 0):
-    if delta < 0:
-        print("VO NGHIEM")
-    elif delta == 0:
-        x = -b / (2*a)
-        print("{:.2f}".format(x))
-    else:
-        x1 = (-b + sqrt(delta)) / (2*a)
-        x2 = (-b - sqrt(delta)) / (2*a)
-        print("{:.2f}".format(x2), "{:.2f}".format(x1))
-else:
-    if b == 0 and c == 0:
-        print("VO SO NGHIEM")
-    elif b == 0 and c != 0:
-        print("VO NGHIEM")
-    elif b != 0:
-        print("{:.2f}".format(-c/b))
+for i in range(1, n+1):
+    print(i, end=" ")
+print()
+for i in range(n, -1, -1):
+    print(i, end=" ")
+print()
+for i in range(0, n + 1, 2):
+    print(i, end=" ")
+print()
+for i in range(1, n + 1, 2):
+    print(i, end=" ")
+print()
+for i in range(0, n, 4):
+    print(i, end=" ")
+print()
+for i in range(0, n):
+    print(chr(97+i), end=' ')
+print()
+for i in range(n, 0, -1):
+    print(chr(123 - i), end=' ')
