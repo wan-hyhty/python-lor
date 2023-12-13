@@ -1,3 +1,11 @@
+# list sclicing
+a[start: end: step]
+reverse = a[::-1]
+copy = a[:]
+# list comprehension
+expression for var in iterable if_clause
+![Alt text](bin/image.png)
+
 # map(function, iterable)
 áp dụng một hàm lên từng phần tử của một hoặc nhiều đối tượng iterable (như danh sách, tuple, hoặc chuỗi) và trả về một đối tượng map chứa kết quả.
 - function: Một hàm mà bạn muốn áp dụng lên từng phần tử của iterable.
