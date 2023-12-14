@@ -1,24 +1,27 @@
-from math import *
-# a, b, c = map(int, input().split())
-n = int(input())
+import math
 
-for i in range(1, n+1):
-    print(i, end=" ")
-print()
-for i in range(n, -1, -1):
-    print(i, end=" ")
-print()
-for i in range(0, n + 1, 2):
-    print(i, end=" ")
-print()
-for i in range(1, n + 1, 2):
-    print(i, end=" ")
-print()
-for i in range(0, n, 4):
-    print(i, end=" ")
-print()
-for i in range(0, n):
-    print(chr(97+i), end=' ')
-print()
-for i in range(n, 0, -1):
-    print(chr(123 - i), end=' ')
+
+def check_prime(x):
+    if x < 2:
+        return False
+    for i in range(2, math.isqrt(x) + 1):
+        if x % i == 0:
+            return False
+    return True
+
+
+if __name__ == "__main__":
+    n = int(input())
+    a = list(map(int, input().split()))
+    b = []
+    # x = int(input())
+    cnt = 0
+    for i in range(1,len(a)-1):
+        l, r = 0, 0
+        for j in range(i):
+            l += a[j]
+        for k in range(i+1, len(a)):
+            r += a[k]
+        if check_prime(l) and check_prime(r):
+            print(i, end = ' ')
+            
