@@ -1,27 +1,25 @@
 import math
 
 
-def check_prime(x):
-    if x < 2:
-        return False
-    for i in range(2, math.isqrt(x) + 1):
-        if x % i == 0:
-            return False
-    return True
+def check_prime(a):
+    a.append(0)
+    a.append(1)
+
+    i = 2
+    while a[i-2] <= 10e18:
+        a.append(a[i - 1] + a[i - 2])
 
 
 if __name__ == "__main__":
     n = int(input())
     a = list(map(int, input().split()))
-    b = []
-    # x = int(input())
-    cnt = 0
-    for i in range(1,len(a)-1):
-        l, r = 0, 0
-        for j in range(i):
-            l += a[j]
-        for k in range(i+1, len(a)):
-            r += a[k]
-        if check_prime(l) and check_prime(r):
-            print(i, end = ' ')
-            
+    max, min = 0, 1e7
+    max_idx, min_idx = 0, 0
+    for i in range(len(a)):
+        if a[i] > max:
+            max = a[i]
+            max_idx = i
+        if a[i] <= min:
+            min = a[i]
+            min_idx = i
+    print(min_idx, max_idx, end = ' ')
